@@ -2,6 +2,7 @@ const { nanoid } = require("nanoid");
 const notes = require("./notes");
 
 const addNoteHandler = (request, h) => {
+    
   const { title, tags, body } = request.payload;
   const id = nanoid(16);
 
@@ -93,6 +94,7 @@ const editNoteByIdHandler = (request, h) => {
     response.code(200);
     return response;
   }
+  
   const response = h.response({
     status: "fail",
     message: "Gagal memperbarui catatan. Id tidak ditemukan",
