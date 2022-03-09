@@ -1,11 +1,10 @@
 const { nanoid } = require("nanoid");
-
 class NotesService {
   constructor() {
-    this.notes = [];
+    this._notes = [];
   }
 
-  addNotes({ title, body, tags }) {
+  addNote({ title, body, tags }) {
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
