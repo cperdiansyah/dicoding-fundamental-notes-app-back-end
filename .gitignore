@@ -3,3 +3,5 @@ notes-api-webserver.pem
 notes-dicoding-fga.pem
 .env
 .prod.env
+
+src/api/uploads/file
